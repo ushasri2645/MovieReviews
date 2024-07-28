@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.5.1",
+    "nconf": "^0.12.1",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/nconf": "^0.10.6",
+    "@types/node": "^20.14.12"
+  },
+  "scripts": {
+    "start": "nodemon app.ts"
+  }
+}

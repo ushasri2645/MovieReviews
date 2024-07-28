@@ -1,0 +1,5 @@
+{
+    "userFile" : "Data/user_reviews.csv",
+    "movieFile" : "Data/movies.csv",
+    "criticFile": "Data/critic_reviews.csv"
+}
