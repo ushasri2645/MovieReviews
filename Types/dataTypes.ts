@@ -1,9 +1,9 @@
-import { Document } from "mongoose"
+import { Document,Schema } from "mongoose"
 
 interface  Userreview extends Document{
     userId: Number,
     rating: Number,
-    movieId: String,
+    movieId: Schema.Types.ObjectId,
     isVerified: Boolean,
     isSuperReviewer:Boolean,
     score: Number,
@@ -29,7 +29,7 @@ interface critic extends Document{
     publicationName: string,
     scoreSentiment: string,
     originalScore: number,
-    movieId:string 
+    movieId: Schema.Types.ObjectId
 }
 
 

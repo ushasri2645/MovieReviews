@@ -1,6 +1,7 @@
 import mongoose, { Schema,model, mongo} from "mongoose";
 import { Userreview } from "../Types/dataTypes";
 import { connection } from "../Config/dbconnection";
+import { movieModel } from "./movie";
 
 // movieId,rating,reviewId,isVerified,isSuperReviewer,hasSpoilers,hasProfanity,score,creationDate,userDisplayName,userRealm,userId
 const userReviewSchema = new mongoose.Schema<Userreview>({
@@ -13,9 +14,8 @@ const userReviewSchema = new mongoose.Schema<Userreview>({
         required: true
     },
     movieId:{
-        type: String,
-        required: true,
-        ref:'Movie'
+        type:Schema.Types.ObjectId,
+        ref: 'Movies'
     },
     isVerified:{
         type: Boolean,

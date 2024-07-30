@@ -8,7 +8,7 @@
 // export default Connection;
 
 import mongoose, { Connection } from "mongoose";
-const connection: Connection = mongoose.createConnection('mongodb://localhost/mongoDB1');
+const connection: Connection = mongoose.createConnection('mongodb://localhost/mongoDB2');
 console.log("Connected")
 
 export {connection}

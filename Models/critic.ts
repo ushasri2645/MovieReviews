@@ -1,4 +1,5 @@
 import { Schema} from "mongoose";
+import { movieModel } from "./movie";
 import {critic} from "../Types/dataTypes";
 import { connection } from '../Config/dbconnection'
 
@@ -80,7 +81,7 @@ const criticReviewSchema = new Schema<critic>({
         }
     },
     movieId:{
-        type:String,
+        type:Schema.Types.ObjectId,
         ref: 'Movies'
     }
 })
