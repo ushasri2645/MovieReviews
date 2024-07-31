@@ -20,7 +20,7 @@ const gradeMap :{ [key:string] : number}= {
 const criticReviewSchema = new Schema<critic>({
     reviewId: {
         type:Number,
-        required:true
+        // required:true
     },
     criticName: {
         type:String,
@@ -82,7 +82,7 @@ const criticReviewSchema = new Schema<critic>({
     },
     movieId:{
         type:Schema.Types.ObjectId,
-        ref: 'Movies'
+        ref: 'Movie'
     }
 })
 

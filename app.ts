@@ -1,4 +1,4 @@
-import { readCSVFile, readFiles } from "./Data/ReadFiles";
+import { readCsvFile, readFiles } from "./Data/ReadFiles";
 import {connection} from './Config/dbconnection'
 import { InsertData } from "./Data/insertData";
 import { criticModel } from "./Models/critic";
@@ -8,9 +8,10 @@ import { Userreview, critic, movie } from "./Types/dataTypes";
 const main = async() => {
     connection;
     const {movieFile,userFile,criticFile} = readFiles();
-    // const movies = await readCSVFile<movie>(movieFile,'m');
-    // const usereviews = await readCSVFile<Userreview>(userFile,'u');
-    // const critics = await readCSVFile<critic>(criticFile,'c');
+    const movies = await readCsvFile(movieFile,'m');
+    const critics = await readCsvFile(criticFile,'c');
+    const usereviews = await readCsvFile(userFile,'u');
+   
 
     // await InsertData(movies,'Movies');
     // await InsertData(usereviews, 'UReview');

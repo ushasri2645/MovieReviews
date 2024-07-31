@@ -15,7 +15,7 @@ const userReviewSchema = new mongoose.Schema<Userreview>({
     },
     movieId:{
         type:Schema.Types.ObjectId,
-        ref: 'Movies'
+        ref: 'Movie'
     },
     isVerified:{
         type: Boolean,
